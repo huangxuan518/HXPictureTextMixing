@@ -13,8 +13,9 @@ HXPictureTextMixingView是一款图文混排的View
 
 # 效果展示
 
+![image](https://github.com/huangxuan518/HXPictureTextMixing/blob/master/HXPictureTextMixing/1.png)
+![image](https://github.com/huangxuan518/HXPictureTextMixing/blob/master/HXPictureTextMixing/2.png)
 
-![image](https://github.com/huangxuan518/HXPictureTextMixingView/blob/master/HXPictureTextMixingView/xiaoguo.gif)
 # 适用
 本标签类适用于单图片(View) + 文字(UILabel)组合显示需求
 
