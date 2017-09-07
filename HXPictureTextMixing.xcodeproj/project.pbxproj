@@ -11,6 +11,8 @@
 		30E706231C476F5200F12FD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E706221C476F5200F12FD1 /* AppDelegate.m */; };
 		30E706261C476F5200F12FD1 /* HXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E706251C476F5200F12FD1 /* HXViewController.m */; };
 		30E7062B1C476F5200F12FD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E7062A1C476F5200F12FD1 /* Assets.xcassets */; };
+		E48738061F6148930022E1A6 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = E48738041F6148930022E1A6 /* 2.png */; };
+		E48738071F6148930022E1A6 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E48738051F6148930022E1A6 /* 1.png */; };
 		E4DDEC211F5FEE5D00A2DE4D /* HXPictureTextMixingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DDEC201F5FEE5D00A2DE4D /* HXPictureTextMixingView.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		30E7062A1C476F5200F12FD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30E7062F1C476F5200F12FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CA8EDBD1D23DDD700A711A2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		E48738041F6148930022E1A6 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		E48738051F6148930022E1A6 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		E4DDEC1F1F5FEE5D00A2DE4D /* HXPictureTextMixingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPictureTextMixingView.h; sourceTree = "<group>"; };
 		E4DDEC201F5FEE5D00A2DE4D /* HXPictureTextMixingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPictureTextMixingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,6 +46,8 @@
 		30D2F71C1CC76D6C007D766B /* 效果图 */ = {
 			isa = PBXGroup;
 			children = (
+				E48738041F6148930022E1A6 /* 2.png */,
+				E48738051F6148930022E1A6 /* 1.png */,
 			);
 			name = "效果图";
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48738071F6148930022E1A6 /* 1.png in Resources */,
+				E48738061F6148930022E1A6 /* 2.png in Resources */,
 				30E7062B1C476F5200F12FD1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
