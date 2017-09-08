@@ -74,16 +74,18 @@
             
             float width = 0;
             
+            NSInteger multiple = 0;
             //计算折行多出来的长度
             if (tosize.width > size.width) {
                 //超出一行
                 width = (int)tosize.width % (int)size.width;
+                multiple = (int)tosize.width / (int)size.width;
             } else {
                 //不足一行
                 width = tosize.width;
             }
-            
-            if (width <= 1 || width + model.space + model.tagSize.width > model.width) {
+
+            if (multiple/width == 2 || width + model.space + model.tagSize.width > model.width) {
                 //文字刚好整行 || 多出的长度 + 间隔 + 标签的宽度 > 最大长度
                 _tagView.frame = CGRectMake(0, self.frame.size.height - model.tagSize.height - 2, model.tagSize.width, model.tagSize.height);
             } else {
@@ -135,16 +137,18 @@
         
         float width = 0;
         
+        NSInteger multiple = 0;
         //计算折行多出来的长度
         if (tosize.width > size.width) {
             //超出一行
             width = (int)tosize.width % (int)size.width;
+            multiple = (int)tosize.width / (int)size.width;
         } else {
             //不足一行
             width = tosize.width;
         }
         
-        if (width <= 1 || width + model.space + model.tagSize.width > model.width) {
+        if (multiple/width == 2 || width + model.space + model.tagSize.width > model.width) {
             //文字刚好整行 || 多出的长度 + 间隔 + 标签的宽度 > 最大长度
             return size.height + model.tagSize.height + 4;
         } else {
