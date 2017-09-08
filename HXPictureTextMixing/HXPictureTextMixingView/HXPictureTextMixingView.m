@@ -83,8 +83,8 @@
                 width = tosize.width;
             }
             
-            if (width + model.space + model.tagSize.width > model.width) {
-                //多出来的不是空格
+            if (width <= 1 || width + model.space + model.tagSize.width > model.width) {
+                //文字刚好整行 || 多出的长度 + 间隔 + 标签的宽度 > 最大长度
                 _tagView.frame = CGRectMake(0, self.frame.size.height - model.tagSize.height - 2, model.tagSize.width, model.tagSize.height);
             } else {
                 float botton = model.tagSize.height - model.fontSize;
@@ -144,7 +144,8 @@
             width = tosize.width;
         }
         
-        if (width + model.space + model.tagSize.width > model.width) {
+        if (width <= 1 || width + model.space + model.tagSize.width > model.width) {
+            //文字刚好整行 || 多出的长度 + 间隔 + 标签的宽度 > 最大长度
             return size.height + model.tagSize.height + 4;
         } else {
             return size.height;

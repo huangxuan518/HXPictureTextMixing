@@ -31,7 +31,7 @@
     tagLabel.text = @"测试标签";
     
     //图文混排数据模型
-    HXPictureTextMixingViewModel *model = [HXPictureTextMixingViewModel ittemModelWithContent:@"蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记荒记蛮荒记蛮荒记蛮荒" fontSize:15 locationType:LocationTypeBack tagSize:tagLabel.frame.size space:10 width:[UIScreen mainScreen].bounds.size.width - 20];
+    HXPictureTextMixingViewModel *model = [HXPictureTextMixingViewModel ittemModelWithContent:@"蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记荒记蛮荒记蛮荒记蛮荒荒记蛮荒荒" fontSize:14 locationType:LocationTypeBack tagSize:tagLabel.frame.size space:10 width:[UIScreen mainScreen].bounds.size.width - 20];
     //高度计算
     float height = [HXPictureTextMixingView getHeightWithModel:model];
     //图文混排View
