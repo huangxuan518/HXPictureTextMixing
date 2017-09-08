@@ -59,7 +59,7 @@
             _contentLabel.text = [NSString stringWithFormat:@"%@%@",spaceStr,model.content];
         } else {
             //标签在文字后面 空格加在后面
-            _contentLabel.text = [NSString stringWithFormat:@"%@%@",model.content,spaceStr];
+            _contentLabel.text = model.content;
         }
         
         //计算空格+文字占据的size
@@ -83,12 +83,12 @@
                 width = tosize.width;
             }
             
-            if (count * spaceSize.width + model.space > width) {
-                //多出的刚好是空格
-                _tagView.frame = CGRectMake(0, self.frame.size.height - model.tagSize.height - 1, model.tagSize.width, model.tagSize.height);
-            } else {
+            if (width + model.space + model.tagSize.width > model.width) {
                 //多出来的不是空格
-                _tagView.frame = CGRectMake(width - model.tagSize.width, self.frame.size.height - model.tagSize.height - 1, model.tagSize.width, model.tagSize.height);
+                _tagView.frame = CGRectMake(0, self.frame.size.height - model.tagSize.height - 2, model.tagSize.width, model.tagSize.height);
+            } else {
+                float botton = model.tagSize.height - model.fontSize;
+                _tagView.frame = CGRectMake(width + 10, self.frame.size.height - model.tagSize.height - 1 + botton/2, model.tagSize.width, model.tagSize.height);
             }
         }
         _contentLabel.frame = CGRectMake(0, 0, size.width, size.height);
@@ -145,7 +145,7 @@
         }
         
         if (width + model.space + model.tagSize.width > model.width) {
-            return size.height + model.tagSize.height + 2;
+            return size.height + model.tagSize.height + 4;
         } else {
             return size.height;
         }

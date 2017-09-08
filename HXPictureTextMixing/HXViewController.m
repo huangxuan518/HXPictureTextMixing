@@ -11,8 +11,6 @@
 
 @interface HXViewController ()
 
-@property (nonatomic,strong) HXPictureTextMixingView *pictureTextMixingView;
-
 @end
 
 @implementation HXViewController
@@ -21,6 +19,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
     
+    //标签
     UILabel *tagLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 14)];
     tagLabel.font = [UIFont systemFontOfSize:12];
     tagLabel.textColor = [UIColor orangeColor];
@@ -31,25 +30,17 @@
     tagLabel.layer.masksToBounds = YES;
     tagLabel.text = @"测试标签";
     
-    HXPictureTextMixingViewModel *model = [HXPictureTextMixingViewModel ittemModelWithContent:@"蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记荒记蛮荒记蛮荒记蛮荒" fontSize:14 locationType:LocationTypeBack tagSize:tagLabel.frame.size space:10 width:[UIScreen mainScreen].bounds.size.width - 20];
-    
+    //图文混排数据模型
+    HXPictureTextMixingViewModel *model = [HXPictureTextMixingViewModel ittemModelWithContent:@"蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记蛮荒记荒记蛮荒记蛮荒记蛮荒" fontSize:15 locationType:LocationTypeBack tagSize:tagLabel.frame.size space:10 width:[UIScreen mainScreen].bounds.size.width - 20];
+    //高度计算
     float height = [HXPictureTextMixingView getHeightWithModel:model];
-    
-    self.pictureTextMixingView.frame = CGRectMake(10, 100, model.width, height);
-    
-    [self.pictureTextMixingView.tagView addSubview:tagLabel];
-    self.pictureTextMixingView.contentLabel.textColor = [UIColor blueColor];
-    
-    [self.pictureTextMixingView setData:model];
-    [self.view addSubview:self.pictureTextMixingView];
-}
-
-- (HXPictureTextMixingView *)pictureTextMixingView {
-    if (!_pictureTextMixingView) {
-        _pictureTextMixingView = [HXPictureTextMixingView new];
-        _pictureTextMixingView.backgroundColor = [UIColor whiteColor];
-    }
-    return _pictureTextMixingView;
+    //图文混排View
+    HXPictureTextMixingView *pictureTextMixingView = [[HXPictureTextMixingView alloc] initWithFrame:CGRectMake(10, 100, model.width, height)];
+    pictureTextMixingView.backgroundColor = [UIColor whiteColor];
+    [pictureTextMixingView.tagView addSubview:tagLabel];
+    pictureTextMixingView.contentLabel.textColor = [UIColor blueColor];
+    [pictureTextMixingView setData:model];
+    [self.view addSubview:pictureTextMixingView];
 }
 
 - (void)didReceiveMemoryWarning {
